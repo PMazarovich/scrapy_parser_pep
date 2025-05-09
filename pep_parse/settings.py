@@ -1,5 +1,5 @@
 BOT_NAME = "pep_parse"
-# LOG_LEVEL = 'INFO'
+LOG_LEVEL = 'INFO'
 FEEDS = {
     "results/pep_%(time)s.csv": {
         "format": "csv",
