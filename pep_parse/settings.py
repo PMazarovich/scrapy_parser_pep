@@ -1,7 +1,12 @@
+import os
+
 from pep_parse.constants import RESULTS_FOLDER_NAME
 
 BOT_NAME = "pep_parse"
 LOG_LEVEL = 'INFO'
+
+os.makedirs(RESULTS_FOLDER_NAME, exist_ok=True)
+
 FEEDS = {
     f"{RESULTS_FOLDER_NAME}/pep_%(time)s.csv": {
         "format": "csv",
