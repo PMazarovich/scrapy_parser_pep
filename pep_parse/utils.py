@@ -7,9 +7,7 @@ from pep_parse.constants import BASE_DIR, PEP_SUMMARY_FILE, RESULTS_FOLDER_NAME
 def create_csv_file(results: dict):
     """Method for pep."""
 
-    total = 0
-    for i in results.values():
-        total += i
+    total = sum(results.values())
     data = (("State", "Amount"), *results.items(), ("Total", total))
     with open(
         os.path.join(BASE_DIR, RESULTS_FOLDER_NAME, PEP_SUMMARY_FILE),
