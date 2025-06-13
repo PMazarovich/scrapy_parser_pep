@@ -12,7 +12,6 @@ def create_csv_file(results: dict):
     total = sum(results.values())
     data = (("State", "Amount"), *results.items(), ("Total", total))
 
-    (Path(BASE_DIR) / RESULTS_FOLDER_NAME).mkdir(parents=True, exist_ok=True)
     with open(
         os.path.join(BASE_DIR, RESULTS_FOLDER_NAME, PEP_SUMMARY_FILE),
         "w",

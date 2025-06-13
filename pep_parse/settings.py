@@ -11,8 +11,8 @@ FEEDS = {
         "fields": ["number", "name", "status"],
     }
 }
-SPIDER_MODULES = ["pep_parse.spiders"]
-NEWSPIDER_MODULE = "pep_parse.spiders"
+SPIDER_MODULES = [f"{BOT_NAME}.spiders"]
+NEWSPIDER_MODULE = f"{BOT_NAME}.spiders"
 
 ROBOTSTXT_OBEY = True
 
