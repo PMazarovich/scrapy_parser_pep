@@ -1,6 +1,5 @@
 import csv
 import os
-from pathlib import Path
 
 from pep_parse.constants import PEP_SUMMARY_FILE, RESULTS_FOLDER_NAME
 from pep_parse.settings import BASE_DIR

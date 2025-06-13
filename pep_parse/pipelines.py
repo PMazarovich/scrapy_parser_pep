@@ -12,7 +12,10 @@ class PepParsePipeline:
     def __init__(self):
         """Create a results folder, initialize the state."""
 
-        (Path(BASE_DIR) / RESULTS_FOLDER_NAME).mkdir(parents=True, exist_ok=True)
+        (Path(BASE_DIR) / RESULTS_FOLDER_NAME).mkdir(
+            parents=True,
+            exist_ok=True
+        )
         self.pep_status = None
 
     def open_spider(self, spider):
