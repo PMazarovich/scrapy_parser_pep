@@ -1,7 +1,9 @@
 import csv
 import os
+from pathlib import Path
 
-from pep_parse.constants import BASE_DIR, PEP_SUMMARY_FILE, RESULTS_FOLDER_NAME
+from pep_parse.settings import BASE_DIR
+from pep_parse.constants import PEP_SUMMARY_FILE, RESULTS_FOLDER_NAME
 
 
 def create_csv_file(results: dict):
@@ -9,6 +11,8 @@ def create_csv_file(results: dict):
 
     total = sum(results.values())
     data = (("State", "Amount"), *results.items(), ("Total", total))
+    
+    (Path(BASE_DIR) / RESULTS_FOLDER_NAME).mkdir(parents=True, exist_ok=True)
     with open(
         os.path.join(BASE_DIR, RESULTS_FOLDER_NAME, PEP_SUMMARY_FILE),
         "w",
