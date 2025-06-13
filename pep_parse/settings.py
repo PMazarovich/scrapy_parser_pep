@@ -1,4 +1,5 @@
 from pathlib import Path
+
 from pep_parse.constants import RESULTS_FOLDER_NAME
 
 BASE_DIR = Path(__file__).parent.parent
